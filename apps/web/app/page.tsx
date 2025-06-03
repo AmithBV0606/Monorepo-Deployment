@@ -5,7 +5,8 @@ export default async function Home() {
 
   return (
     <div className="flex justify-center item-center w-full h-screen bg-green-500">
-      <p className="text-2xl">Name or Username : {user?.username}</p>
+      <h1>User Info</h1>
+      <p className="text-2xl">Username : {user?.username}</p>
       <p className="text-2xl">Password : {user?.password}</p>
     </div>
   );
