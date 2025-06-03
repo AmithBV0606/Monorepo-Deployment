@@ -16,14 +16,7 @@ jobs:
             key: ${{ secrets.KEY }}
             port: ${{ secrets.PORT }}
             script: |
-                cd /home/ubuntu/Monorepo-Deploy
-                export NVM_DIR="$HOME/.nvm"
-                source $NVM_DIR/nvm.sh
-                export PATH=$PATH:/home/ubuntu/.npm-global/bin
-                git pull origin main 
-                pnpm install
-                pnpm run build 
-                pm2 restart fe-server 
-                pm2 restart http-server 
-                pm2 restart ws-serve
+                ls
+                cd Monorepo-Deployment
+                ls
 
