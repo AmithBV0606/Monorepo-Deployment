@@ -9,12 +9,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: |
-                echo ${{ secrets.SSH_PRIVATE_KEY }} &> ~/ssh_key
-                ssh -i ~/ssh_key ubuntu@
+                echo "${{ secrets.SSH_PRIVATE_KEY }}" &> ~/ssh_key
+                ssh -i ~/ssh_key ubuntu@3.95.193.244
                 cd Monorepo-Deployment/ && git pull
                 pnpm install
                 pnpm run build
                 pm2 restart fe-server
                 pm2 restart http-server
                 pm2 restart ws-server
-                
