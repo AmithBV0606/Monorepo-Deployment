@@ -19,3 +19,4 @@ jobs:
                 ls
                 cd Monorepo-Deployment
                 git pull origin main
+                pnpm install
