@@ -18,5 +18,4 @@ jobs:
             script: |
                 ls
                 cd Monorepo-Deployment
-                ls
-
+                git pull origin main
